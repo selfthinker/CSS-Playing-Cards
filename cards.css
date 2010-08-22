@@ -33,10 +33,6 @@
     box-shadow: .2em .2em .5em #333;
 }
 
-.playingCards .cardx {
-    -moz-box-shadow: 3px 3px 10px #333;
-}
-
 .playingCards a.card {
     text-decoration: none;
 }
