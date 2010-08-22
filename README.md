@@ -15,7 +15,7 @@ Contents
 * **cards-ie.css** is a tiny fix for IE to make a simple version work
 * **examples.html** provides some example HTML
 * **README** is this file
-* **faces/* contains images for the faces
+* **faces/** contains images for the faces
 
 How to use it
 -------------
@@ -31,8 +31,8 @@ There needs to be a surrounding container with the class "playingCards" around a
 * **fourColours**: Switches the default two colour deck with a four colour deck. (The colours of the German four colour deck will be different.)
 * **faceImages**: Switches the default simple big letters for faces with images. (The default letters are dependent on the language.) *Note: Depending on the size of the card, you might need to adjust the image positioning of the faces in cards.css (search for "@change").*
 * **simpleCards**: Switches the default multiple suits to one simple single big suit in the middle. *Note: This option does not work with "faceImages" and "playfulSuits"*.
-* playfulSuits: Switches the default normal suits to more fancy ones.
-* rotateHand: Switches the hand to rotate and fan in a semi circle.
+* **playfulSuits**: Switches the default normal suits to more fancy ones.
+* **rotateHand**: Switches the hand to rotate and fan in a semi circle.
 
 ### The back of a card
 
@@ -79,5 +79,5 @@ To make a basic version work in IE8, you need the provided **cards-ie.css**.
 Credits
 -------
 
-* The faces' images are taken from http://svg-cards.sourceforge.net/
+* The faces' images are taken from [svg-cards](http://svg-cards.sourceforge.net/)
 * One of the cards back images was taken from http://www.squidfingers.com/patterns/
