@@ -1,0 +1,14 @@
+/**
+ * IE Styles for CSS Playing Cards
+ *
+ * @author   Anika Henke <anika@selfthinker.org>
+ * @license  CC BY-SA [http://creativecommons.org/licenses/by-sa/3.0]
+ * @version  2010-08-22
+ * @link     http://github.com/selfthinker/css-playing-cards
+ */
+
+/* sadly, IE8 cannot cope with the :nth-child(n) selector */
+.cssCards ul.hand li,
+.cssCards ul.deck li {
+    position: static;
+}

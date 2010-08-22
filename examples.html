@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+ * Example HTML for CSS Playing Cards
+ *
+ * @author   Anika Henke <anika@selfthinker.org>
+ * @license  CC BY-SA [http://creativecommons.org/licenses/by-sa/3.0]
+ * @version  2010-08-22
+ * @link     http://github.com/selfthinker/css-playing-cards
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>CSS Playing Cards</title>
+    <link rel="stylesheet" type="text/css" href="cards.css" media="screen" />
+    <!--[if IE]>
+        <link rel="stylesheet" type="text/css" href="cards-ie.css" media="screen" />
+    <![endif]-->
+    <!-- the following js and css is not part of the CSS cards, but only for this example page -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript"><!--
+    $(document).ready(function(){
+        $('.options').addClass('active');
+        $('.toggle li').click(function(){
+            $('.playingCards').toggleClass($(this).text());
+        });
+        $('.lang li').click(function(){
+            $('html').attr('lang', $(this).text());
+            $('html').attr('xml:lang', $(this).text());
+        });
+    });
+    //--></script>
+    <style type="text/css"><!--
+        body {
+            margin: 2em 20%;
+        }
+        .options.active {
+            position: fixed;
+            top: 1em;
+            right: 1em;
+            background: #ddd;
+            padding: .5em;
+        }
+        .options.active h3 {
+            font-size: 1.2em;
+        }
+        .options.active ul {
+            padding: 0;
+        }
+        .options.active li {
+            color: #00c;
+            text-decoration: underline;
+            margin-left: 1.5em;
+            cursor: pointer;
+        }
+        .options.active li:hover {
+            text-decoration: none;
+        }
+        div.clear {
+            clear: both;
+            height: 0;
+            line-height: 0;
+            font-size: 1px;
+            visibility: hidden;
+        }
+    --></style>
+</head>
+<body>
+
+<div class="playingCards fourColours faceImages rotateHand">
+
+    <h1>CSS Playing Cards</h1>
+
+    <p>Surrounding Container:</p>
+    <pre>
+&lt;div class="playingCards"&gt;...&lt;/div&gt;
+    </pre>
+
+    <p>With different options (default is the respective opposite):</p>
+    <pre>
+&lt;div class="playingCards fourColours faceImages rotateHand"&gt;...&lt;/div&gt;
+    </pre>
+
+    <div class="options">
+        <h3>Options:</h3>
+        <ul class="toggle">
+            <li title="toggles a four colour deck with a standard two colour deck">fourColours</li>
+            <li title="toggles images or simple letters for faces">faceImages</li>
+            <li title="toggles the complexity of what's shown inside a card">simpleCards</li>
+            <li title="toggles two different types of suits">playfulSuits</li>
+            <li title="toggles the rotation of cards in hand">rotateHand</li>
+        </ul>
+        <h3>Languages:</h3>
+        <ul class="lang">
+            <li>en</li>
+            <li>de</li>
+            <li>fr</li>
+        </ul>
+    </div>
+
+    <p><em>Note: &quot;.simpleCards&quot; doesn't work with &quot;.faceImages&quot; and &quot;.playfulSuits&quot;.</em></p>
+
+<!-- .card -->
+    <h2>Single Cards</h2>
+
+    <h3>Back</h3>
+
+    <div class="card back">*</div>
+    <pre>
+&lt;div class="card back"&gt;*&lt;/div&gt;
+    </pre>
+    <div class="clear"></div>
+
+    <h3>Front</h3>
+
+    <div class="card rank-7 spades cardx">
+        <span class="rank">7</span>
+        <span class="suit">&spades;</span>
+    </div>
+    <pre>
+&lt;div class="card rank-7 spades"&gt;
+    &lt;span class="rank"&gt;7&lt;/span&gt;
+    &lt;span class="suit"&gt;&amp;spades;&lt;/span&gt;
+&lt;/div&gt;
+    </pre>
+    <div class="clear"></div>
+
+    <h3>Selected</h3>
+
+    <strong>
+        <span class="card rank-a clubs">
+            <span class="rank">A</span>
+            <span class="suit">&clubs;</span>
+        </span>
+    </strong>
+    <pre>
+&lt;strong&gt;
+    &lt;span class="card rank-a clubs"&gt;
+        &lt;span class="rank"&gt;A&lt;/span&gt;
+        &lt;span class="suit"&gt;&amp;clubs;&lt;/span&gt;
+    &lt;/span&gt;
+&lt;/strong&gt;
+    </pre>
+    <div class="clear"></div>
+
+    <h3>As a Link (for selecting single cards)</h3>
+
+    <a class="card rank-q hearts" href="#">
+        <span class="rank">Q</span>
+        <span class="suit">&hearts;</span>
+    </a>
+    <pre>
+&lt;a class="card rank-q hearts" href="#"&gt;
+    &lt;span class="rank"&gt;Q&lt;/span&gt;
+    &lt;span class="suit"&gt;&amp;hearts;&lt;/span&gt;
+&lt;/a&gt;
+    </pre>
+    <div class="clear"></div>
+
+    <h3>As a Label with Checkbox (for selecting multiple cards)</h3>
+
+    <label for="c-2D" class="card rank-2 diams">
+        <span class="rank">2</span>
+        <span class="suit">&diams;</span>
+        <input type="checkbox" name="c-2D" id="c-2D" value="select" />
+    </label>
+    <pre>
+&lt;label for="c-2D" class="card rank-2 diams"&gt;
+    &lt;span class="rank"&gt;2&lt;/span&gt;
+    &lt;span class="suit"&gt;&amp;diams;&lt;/span&gt;
+    &lt;input type="checkbox" name="c-2D" id="c-2D" value="select" /&gt;
+&lt;/label>
+    </pre>
+    <div class="clear"></div>
+
+    <h2>Different Hands</h2>
+
+<!-- ul.table -->
+    <h3>Lying on the Table</h3>
+
+    <pre>
+&lt;ul class="table"&gt;
+    &lt;li&gt;...card...&lt;/li&gt;
+    ...
+&lt;/ul&gt;
+    </pre>
+
+    <ul class="table">
+        <li>
+            <a class="card rank-2 diams" href="#">
+                <span class="rank">2</span>
+                <span class="suit">&diams;</span>
+            </a>
+        </li>
+        <li>
+            <a class="card rank-q hearts" href="#">
+                <span class="rank">Q</span>
+                <span class="suit">&hearts;</span>
+            </a>
+        </li>
+        <li>
+            <a class="card rank-a clubs" href="#">
+                <span class="rank">A</span>
+                <span class="suit">&clubs;</span>
+            </a>
+        </li>
+        <li>
+            <strong>
+                <a class="card rank-3 hearts" href="#">
+                    <span class="rank">3</span>
+                    <span class="suit">&hearts;</span>
+                </a>
+            </strong>
+        </li>
+        <li>
+            <label for="c-10C" class="card rank-10 clubs">
+                <span class="rank">10</span>
+                <span class="suit">&clubs;</span>
+                <input type="checkbox" name="c-10C" id="c-10C" value="select" />
+            </label>
+        </li>
+        <li>
+            <label for="c-JD" class="card rank-j diams">
+                <span class="rank">J</span>
+                <span class="suit">&diams;</span>
+                <input type="checkbox" name="c-JD" id="c-JD" value="select" />
+            </label>
+        </li>
+        <li>
+            <label for="c-9S" class="card rank-9 spades">
+                <span class="rank">9</span>
+                <span class="suit">&spades;</span>
+                <input type="checkbox" name="c-9S" id="c-9S" value="select" />
+            </label>
+        </li>
+    </ul>
+    <div class="clear"></div>
+
+<!-- ul.hand -->
+
+    <h3>In your Hand</h3>
+
+<pre>
+&lt;ul class="hand"&gt;
+    &lt;li&gt;...card...&lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</pre>
+
+    <ul class="hand">
+        <li>
+            <a class="card rank-7 diams" href="#">
+                <span class="rank">7</span>
+                <span class="suit">&diams;</span>
+            </a>
+        </li>
+        <li>
+            <a class="card rank-8 hearts" href="#">
+                <span class="rank">8</span>
+                <span class="suit">&hearts;</span>
+            </a>
+        </li>
+        <li>
+            <strong>
+                <a class="card rank-9 spades" href="#">
+                    <span class="rank">9</span>
+                    <span class="suit">&spades;</span>
+                </a>
+            </strong>
+        </li>
+        <li>
+            <a class="card rank-10 clubs" href="#">
+                <span class="rank">10</span>
+                <span class="suit">&clubs;</span>
+            </a>
+        </li>
+        <li>
+            <a class="card rank-j diams" href="#">
+                <span class="rank">J</span>
+                <span class="suit">&diams;</span>
+            </a>
+        </li>
+        <li>
+            <a class="card rank-5 clubs" href="#">
+                <span class="rank">5</span>
+                <span class="suit">&clubs;</span>
+            </a>
+        </li>
+        <li>
+            <a class="card rank-6 diams" href="#">
+                <span class="rank">6</span>
+                <span class="suit">&diams;</span>
+            </a>
+        </li>
+        <li>
+            <a class="card rank-q hearts" href="#">
+                <span class="rank">Q</span>
+                <span class="suit">&hearts;</span>
+            </a>
+        </li>
+        <li>
+            <a class="card rank-k spades" href="#">
+                <span class="rank">K</span>
+                <span class="suit">&spades;</span>
+            </a>
+        </li>
+    </ul>
+    <div class="clear"></div>
+
+<!-- ul.deck -->
+
+    <h3>A Deck</h3>
+
+<pre>
+&lt;ul class="deck"&gt;
+    &lt;li&gt;...card...&lt;/li&gt;
+    ...
+&lt;/ul&gt;
+</pre>
+
+    <ul class="deck">
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+        <li>
+            <div class="card back">*</div>
+        </li>
+<!--
+        <li>
+            <a class="card rank-7 diams" href="#">
+                <span class="rank">7</span>
+                <span class="suit">&diams;</span>
+            </a>
+        </li>
+-->
+    </ul>
+    <div class="clear"></div>
+
+<!-- A Full Set -->
+
+    <h2 id="full">A Full Set</h2>
+
+    <ul class="table">
+        <li>
+            <div class="card rank-2 diams"><span class="rank">2</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-3 diams"><span class="rank">3</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-4 diams"><span class="rank">4</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-5 diams"><span class="rank">5</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-6 diams"><span class="rank">6</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-7 diams"><span class="rank">7</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-8 diams"><span class="rank">8</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-9 diams"><span class="rank">9</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-10 diams"><span class="rank">10</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-j diams"><span class="rank">J</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-q diams"><span class="rank">Q</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-k diams"><span class="rank">K</span><span class="suit">&diams;</span></div>
+        </li>
+        <li>
+            <div class="card rank-a diams"><span class="rank">A</span><span class="suit">&diams;</span></div>
+        </li>
+    </ul>
+
+    <ul class="table">
+        <li>
+            <div class="card rank-2 hearts"><span class="rank">2</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-3 hearts"><span class="rank">3</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-4 hearts"><span class="rank">4</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-5 hearts"><span class="rank">5</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-6 hearts"><span class="rank">6</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-7 hearts"><span class="rank">7</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-8 hearts"><span class="rank">8</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-9 hearts"><span class="rank">9</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-10 hearts"><span class="rank">10</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-j hearts"><span class="rank">J</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-q hearts"><span class="rank">Q</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-k hearts"><span class="rank">K</span><span class="suit">&hearts;</span></div>
+        </li>
+        <li>
+            <div class="card rank-a hearts"><span class="rank">A</span><span class="suit">&hearts;</span></div>
+        </li>
+    </ul>
+
+    <ul class="table">
+        <li>
+            <div class="card rank-2 spades"><span class="rank">2</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-3 spades"><span class="rank">3</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-4 spades"><span class="rank">4</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-5 spades"><span class="rank">5</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-6 spades"><span class="rank">6</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-7 spades"><span class="rank">7</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-8 spades"><span class="rank">8</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-9 spades"><span class="rank">9</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-10 spades"><span class="rank">10</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-j spades"><span class="rank">J</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-q spades"><span class="rank">Q</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-k spades"><span class="rank">K</span><span class="suit">&spades;</span></div>
+        </li>
+        <li>
+            <div class="card rank-a spades"><span class="rank">A</span><span class="suit">&spades;</span></div>
+        </li>
+    </ul>
+
+    <ul class="table">
+        <li>
+            <div class="card rank-2 clubs"><span class="rank">2</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-3 clubs"><span class="rank">3</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-4 clubs"><span class="rank">4</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-5 clubs"><span class="rank">5</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-6 clubs"><span class="rank">6</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-7 clubs"><span class="rank">7</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-8 clubs"><span class="rank">8</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-9 clubs"><span class="rank">9</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-10 clubs"><span class="rank">10</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-j clubs"><span class="rank">J</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-q clubs"><span class="rank">Q</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-k clubs"><span class="rank">K</span><span class="suit">&clubs;</span></div>
+        </li>
+        <li>
+            <div class="card rank-a clubs"><span class="rank">A</span><span class="suit">&clubs;</span></div>
+        </li>
+    </ul>
+    <div class="clear"></div>
+
+</div>
+
+</body>
+</html>
