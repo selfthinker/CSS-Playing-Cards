@@ -11,7 +11,7 @@
 ********************************************************************/
 
 .playingCards .card {
-    display: block;
+    display: inline-block;
     width: 3.3em;
     height: 4.6em;
     border: 1px solid #666;
@@ -22,7 +22,6 @@
     padding: .25em;
     margin: 0 .5em .5em 0;
     text-align: center;
-    float: left;
     font-size: 1.2em; /* @change: adjust this value to make bigger or smaller cards */
     font-weight: normal;
     font-family: Arial, sans-serif;
@@ -115,6 +114,9 @@
 .playingCards .card.rank-k input,
 .playingCards .card.rank-a input {
     margin-top: 2.35em;
+}
+.playingCards.inText .card input {
+    margin-top: 0;
 }
 
 /* inner multiple suits */
@@ -544,6 +546,26 @@
 }
 */
 
+.playingCards.inText .card {
+    font-size: .4em;
+    vertical-align: middle;
+}
+.playingCards.inText .card span.rank,
+.playingCards.inText .card span.suit {
+    text-align: center;
+}
+.playingCards.inText .card span.rank {
+    font-size: 2em;
+    margin-top: .2em;
+}
+.playingCards.inText .card span.suit {
+    font-size: 2.5em;
+}
+.playingCards.inText .card .suit:after {
+    content: "" !important;
+}
+
+
 /* hand (in your hand or on table or as a deck)
 ********************************************************************/
 
@@ -565,6 +587,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    float: left;
 }
 
 .playingCards ul.hand,
