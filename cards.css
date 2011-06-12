@@ -85,6 +85,12 @@
 [lang=de] .playingCards.fourColours .card.clubs {
     color: #000 !important;
 }
+.playingCards .card.joker {
+    color: #000 !important;
+}
+.playingCards .card.joker.big {
+    color: #f00 !important;
+}
 
 /* inner bits
 ********************************************************************/
@@ -120,6 +126,13 @@
 }
 
 /* different rank letters for different languages */
+.playingCards .card .rank:after,
+.playingCards .card.joker .rank:before {
+    position: absolute;
+    top: .25em;
+    left: .25em;
+    background: #fff;
+}
 [lang=de] .playingCards .card.rank-j .rank:after {
     content: "B";
 }
@@ -132,6 +145,19 @@
 }
 [lang=fr] .playingCards .card.rank-k .rank:after {
     content: "R";
+}
+
+/* joker (top left symbol) */
+.playingCards .card.joker .rank {
+    position: absolute;
+}
+.playingCards .card.joker .rank:before {
+    content: "\2605";
+    top: 0;
+    left: 0;
+}
+.playingCards .card.joker .suit {
+    text-indent: -9999px;
 }
 
 /* inner multiple suits */
@@ -292,7 +318,8 @@
 }
 .playingCards.faceImages .card.rank-j,
 .playingCards.faceImages .card.rank-q,
-.playingCards.faceImages .card.rank-k {
+.playingCards.faceImages .card.rank-k,
+.playingCards.faceImages .card.joker {
     background-repeat: no-repeat;
     background-position: -1em 0;
     /* @change: smaller cards: more negative distance from the left
@@ -323,6 +350,7 @@
 .playingCards.faceImages .card.rank-k.spades { background-image: url(faces/KS.gif); }
 .playingCards.faceImages .card.rank-k.clubs  { background-image: url(faces/KC.gif); }
 
+.playingCards.faceImages .card.joker         { background-image: url(faces/joker.gif); }
 
 /*____________ symbols in the middle (faces as dingbat symbols) ____________*/
 
@@ -330,7 +358,8 @@
 .playingCards .card.rank-j .suit:after,
 .playingCards .card.rank-q .suit:after,
 .playingCards .card.rank-k .suit:after,
-.playingCards .card.rank-a .suit:after {
+.playingCards .card.rank-a .suit:after,
+.playingCards .card.joker .rank:after {
     font-family: Georgia, serif;
     position: absolute;
     font-size: 3em;
@@ -351,12 +380,15 @@
 .playingCards .card.rank-k .suit:after {
     content: "\265A";
 }
-
-.playingCards .card .rank:after {
+/* joker (inner symbol) */
+.playingCards.faceImages .card.joker .rank:after {
+    content: "";
+}
+.playingCards .card.joker .rank:after {
     position: absolute;
-    top: .25em;
-    left: .25em;
-    background: #fff;
+    content: "\262F";
+    top: .4em;
+    left: .1em;
 }
 
 /* big suits in middle */
@@ -404,7 +436,8 @@
 .playingCards.inText .card span.suit {
     font-size: 2.5em;
 }
-.playingCards.inText .card .suit:after {
+.playingCards.inText .card .suit:after,
+.playingCards.inText .card.joker .rank:after {
     content: "" !important;
 }
 
