@@ -8,7 +8,7 @@
  */
 
 /* sadly, IE8 cannot cope with the :nth-child(n) selector */
-.cssCards ul.hand li,
-.cssCards ul.deck li {
+.playingCards ul.hand li,
+.playingCards ul.deck li {
     position: static;
 }
