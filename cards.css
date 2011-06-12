@@ -111,7 +111,7 @@
 
 /* checkbox */
 .playingCards .card input {
-    margin-top: .05em;
+    margin-top: -.05em;
     font: inherit;
 }
 .playingCards.simpleCards .card input,
