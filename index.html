@@ -12,6 +12,8 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>CSS Playing Cards</title>
+    <link rel="stylesheet" type="text/css" href="basic.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="smoothness/jquery-ui-1.8.13.custom.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="cards.css" media="screen" />
     <!--[if lt IE 9]>
         <link rel="stylesheet" type="text/css" href="cards-ie.css" media="screen" />
@@ -21,6 +23,7 @@
     <![endif]-->
     <!-- the following js and css is not part of the CSS cards, but only for this example page -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
     <script type="text/javascript"><!--
     $(document).ready(function(){
         $('.options').addClass('active');
@@ -31,11 +34,15 @@
             $('html').attr('lang', $(this).text());
             $('html').attr('xml:lang', $(this).text());
         });
+        $('#cards').tabs();
     });
     //--></script>
     <style type="text/css"><!--
         body {
             margin: 2em 20%;
+        }
+        #cards {
+            margin-bottom: 1.5em;
         }
         .options.active {
             position: fixed;
@@ -43,21 +50,24 @@
             right: 1em;
             background: #ddd;
             padding: .5em;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
         }
         .options.active h3 {
             font-size: 1.2em;
         }
         .options.active ul {
             padding: 0;
+            margin-left: 0;
         }
         .options.active li {
             color: #00c;
-            text-decoration: underline;
             margin-left: 1.5em;
             cursor: pointer;
         }
         .options.active li:hover {
-            text-decoration: none;
+            text-decoration: underline;
         }
         div.clear {
             clear: both;
@@ -70,20 +80,47 @@
 </head>
 <body>
 
-<div class="playingCards fourColours faceImages rotateHand">
-
     <h1>CSS Playing Cards</h1>
 
-    <p>Surrounding Container:</p>
-    <pre>
+<div class="playingCards fourColours faceImages rotateHand" id="cards">
+
+    <ul id="toc">
+        <li><a href="#basics">Basics</a></li>
+        <!--<li>Single Cards
+            <ul>-->
+                <li><a href="#back">Back</a></li>
+                <li><a href="#front">Front</a></li>
+                <li><a href="#a-joker">Joker</a></li>
+                <li><a href="#selected">Selected</a></li>
+                <li><a href="#as-a-link">As Link</a></li>
+                <li><a href="#as-a-label">As Label</a></li>
+            <!--</ul>
+        </li>
+        <li>Different Hands
+            <ul>-->
+                <li><a href="#lying-on-the-table">On the Table</a></li>
+                <li><a href="#in-your-hand">In Hand</a></li>
+                <li><a href="#a-deck">A Deck</a></li>
+            <!--</ul>
+        </li>-->
+        <li><a href="#a-full-set">A Full Set</a></li>
+        <li><a href="#more">More</a></li>
+    </ul>
+
+    <div id="basics">
+        <p>Surrounding Container:</p>
+<pre>
 &lt;div class="playingCards"&gt;...&lt;/div&gt;
-    </pre>
+</pre>
 
-    <p>With different options (default is the respective opposite):</p>
-    <pre>
-&lt;div class="playingCards fourColours faceImages rotateHand"&gt;...&lt;/div&gt;
-    </pre>
+        <p>With different options (default is the respective opposite):</p>
+<pre>
+&lt;div class="playingCards fourColours faceImages simpleCards inText rotateHand"&gt;...&lt;/div&gt;
+</pre>
 
+        <p><em>Note: &quot;.simpleCards&quot; doesn't work with &quot;.faceImages&quot;.</em></p>
+
+    </div>
     <div class="options">
         <h3>Options:</h3>
         <ul class="toggle">
@@ -101,47 +138,53 @@
         </ul>
     </div>
 
-    <p><em>Note: &quot;.simpleCards&quot; doesn't work with &quot;.faceImages&quot;.</em></p>
-
 <!-- .card -->
-    <h2>Single Cards</h2>
+
+<div id="back">
+    <h2 id="single-cards">Single Cards</h2>
 
     <h3>Back</h3>
 
     <div class="card back">*</div>
-    <pre>
+<pre>
 &lt;div class="card back"&gt;*&lt;/div&gt;
-    </pre>
+</pre>
     <div class="clear"></div>
+</div>
 
+<div id="front">
     <h3>Front</h3>
 
     <div class="card rank-7 spades">
         <span class="rank">7</span>
         <span class="suit">&spades;</span>
     </div>
-    <pre>
+<pre>
 &lt;div class="card rank-7 spades"&gt;
     &lt;span class="rank"&gt;7&lt;/span&gt;
     &lt;span class="suit"&gt;&amp;spades;&lt;/span&gt;
 &lt;/div&gt;
-    </pre>
+</pre>
     <div class="clear"></div>
+</div>
 
-    <h4>A Joker</h4>
+<div id="a-joker">
+    <h3>A Joker</h3>
 
     <div class="card joker little">
         <span class="rank">-</span>
         <span class="suit">Joker</span>
     </div>
-    <pre>
+<pre>
 &lt;div class="card little joker"&gt;
     &lt;span class="rank"&gt;-&lt;/span&gt;
     &lt;span class="suit"&gt;Joker&lt;/span&gt;
 &lt;/div>
-    </pre>
+</pre>
     <div class="clear"></div>
+</div>
 
+<div id="selected">
     <h3>Selected</h3>
 
     <strong>
@@ -150,30 +193,34 @@
             <span class="suit">&clubs;</span>
         </span>
     </strong>
-    <pre>
+<pre>
 &lt;strong&gt;
     &lt;span class="card rank-a clubs"&gt;
         &lt;span class="rank"&gt;A&lt;/span&gt;
         &lt;span class="suit"&gt;&amp;clubs;&lt;/span&gt;
     &lt;/span&gt;
 &lt;/strong&gt;
-    </pre>
+</pre>
     <div class="clear"></div>
+</div>
 
+<div id="as-a-link">
     <h3>As a Link (for selecting single cards)</h3>
 
     <a class="card rank-q hearts" href="#">
         <span class="rank">Q</span>
         <span class="suit">&hearts;</span>
     </a>
-    <pre>
+<pre>
 &lt;a class="card rank-q hearts" href="#"&gt;
     &lt;span class="rank"&gt;Q&lt;/span&gt;
     &lt;span class="suit"&gt;&amp;hearts;&lt;/span&gt;
 &lt;/a&gt;
-    </pre>
+</pre>
     <div class="clear"></div>
+</div>
 
+<div id="as-a-label">
     <h3>As a Label with Checkbox (for selecting multiple cards)</h3>
 
     <label for="c-2D" class="card rank-2 diams">
@@ -181,26 +228,28 @@
         <span class="suit">&diams;</span>
         <input type="checkbox" name="c-2D" id="c-2D" value="select" />
     </label>
-    <pre>
+<pre>
 &lt;label for="c-2D" class="card rank-2 diams"&gt;
     &lt;span class="rank"&gt;2&lt;/span&gt;
     &lt;span class="suit"&gt;&amp;diams;&lt;/span&gt;
     &lt;input type="checkbox" name="c-2D" id="c-2D" value="select" /&gt;
 &lt;/label>
-    </pre>
+</pre>
     <div class="clear"></div>
-
-    <h2>Different Hands</h2>
+</div>
 
 <!-- ul.table -->
+<div id="lying-on-the-table">
+    <h2 id="different-hands">Different Hands</h2>
+
     <h3>Lying on the Table</h3>
 
-    <pre>
+<pre>
 &lt;ul class="table"&gt;
     &lt;li&gt;...card...&lt;/li&gt;
     ...
 &lt;/ul&gt;
-    </pre>
+</pre>
 
     <ul class="table">
         <li>
@@ -252,9 +301,11 @@
         </li>
     </ul>
     <div class="clear"></div>
+</div>
 
 <!-- ul.hand -->
 
+<div id="in-your-hand">
     <h3>In your Hand</h3>
 
 <pre>
@@ -323,9 +374,11 @@
         </li>
     </ul>
     <div class="clear"></div>
+</div>
 
 <!-- ul.deck -->
 
+<div id="a-deck">
     <h3>A Deck</h3>
 
 <pre>
@@ -398,10 +451,12 @@
         </li>
     </ul>
     <div class="clear"></div>
+</div>
 
 <!-- A Full Set -->
 
-    <h2 id="full">A Full Set</h2>
+<div id="a-full-set">
+    <h2>A Full Set</h2>
 
     <ul class="table">
         <li>
@@ -583,9 +638,11 @@
         </li>
     </ul>
     <div class="clear"></div>
+</div>
 
 <!-- More -->
 
+<div id="more">
     <h2>More</h2>
 
     <ul>
@@ -594,6 +651,7 @@
         <li><a href="https://github.com/selfthinker/CSS-Playing-Cards/zipball/master">Download from GitHub</a></li>
         <li><a href="http://socialcompare.com/en/comparison/css-playing-cards-pgnq7dx">Comparison of CSS Playing Cards</a></li>
     </ul>
+</div>
 
 </div>
 

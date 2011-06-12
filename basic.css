@@ -1,0 +1,330 @@
+/**
+ * Basic Styles
+ *
+ * You will most likely want to change the font stacks, font sizes and colours. Search for the following:
+ * * §font
+ * * §fsize
+ * * §colour
+ *
+ * @version 2011-05-08
+ * @link    http://blog.selfthinker.org/2011/05/08/basic-is-the-new-reset/
+ * @license CC0 [http://creativecommons.org/publicdomain/zero/1.0/]
+ * @author  Anika Henke <anika@selfthinker.org>
+ */
+
+html {
+    overflow-x: auto;
+    overflow-y: scroll;
+}
+html, body {
+    background-color: #fff; /* §colour  */
+    color: #333; /* §colour */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    font: normal 100%/1.4 Frutiger, "Frutiger Linotype", Univers, Calibri, Myriad, "Liberation Sans", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif; /* §fsize §font */
+    /* default font size: 100% => 16px; 93.75% => 15px; 87.5% => 14px; 81.25% => 13px; 75% => 12px */
+}
+
+
+/*____________ headings ____________*/
+
+h1, h2, h3, h4, h5, h6,
+caption, legend {
+    font-family: Constantia, Utopia, Lucidabright, Lucida, Georgia, serif; /* §font */
+    font-weight: bold;
+    line-height: 1.2;
+    color: #666; /* §colour */
+    background-color: inherit;
+    padding: 0;
+    clear: both;
+}
+
+h1 { font-size: 2.25em;  margin: 0 0 0.444em; } /* §fsize */
+h2 { font-size: 1.5em;   margin: 0 0 0.666em; } /* §fsize */
+h3 { font-size: 1.125em; margin: 0 0 0.888em; } /* §fsize */
+h4 { font-size: 1em;     margin: 0 0 1.0em; } /* §fsize */
+h5 { font-size: .875em;  margin: 0 0 1.1428em; } /* §fsize */
+h6 { font-size: .75em;   margin: 0 0 1.333em; } /* §fsize */
+/* bottom margin = 1 / font-size */
+
+
+/*____________ basic margins and paddings ____________*/
+
+p, ul, ol, dl, pre, table,
+hr, blockquote, fieldset, address {
+    margin: 0 0 1.4em 0; /* bottom margin = line-height */
+    padding: 0;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*____________ lists ____________*/
+
+ul, ol {
+    margin-left: 1.5em;
+    padding: 0;
+}
+li, dd {
+    margin: 0 0 0 1.5em;
+    padding: 0;
+}
+dt {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+li ul, li ol, li dl,
+dl ul, dl ol, dl dl {
+    margin: 0;
+}
+li li {
+    font-size: 100%;
+}
+
+ul             { list-style: disc outside; }
+ol             { list-style: decimal outside; }
+ol ol          { list-style-type: lower-alpha; }
+ol ol ol       { list-style-type: upper-roman; }
+ol ol ol ol    { list-style-type: upper-alpha; }
+ol ol ol ol ol { list-style-type: lower-roman; }
+
+
+/*____________ tables ____________*/
+
+table {
+    border-collapse: collapse;
+    empty-cells: show;
+    border-spacing: 0;
+    border: 1px solid #ccc; /* §colour */
+}
+caption {
+    caption-side: top;
+    text-align: left;
+    margin: 0 0 .3em;
+}
+th, td {
+    padding: .3em .5em;
+    margin: 0;
+    vertical-align: top;
+    text-align: left;
+    border: 1px solid #ccc; /* §colour */
+}
+th {
+    font-weight: bold;
+    background-color: #eee; /* §colour */
+    color: inherit;
+}
+
+
+/*____________ links ____________*/
+
+a {
+    background-color: inherit;
+}
+a:link, a:visited {
+    text-decoration: none;
+}
+a:link {
+    color: #00c; /* §colour */
+}
+a:visited {
+    color: #606; /* §colour */
+}
+a:link:hover, a:visited:hover,
+a:link:focus, a:visited:focus,
+a:link:active, a:visited:active {
+    text-decoration: underline;
+}
+a:link:focus, a:visited:focus {
+    outline: 1px dotted;
+}
+a:link:active, a:visited:active {
+    color: #c00; /* §colour */
+}
+
+
+/*____________ forms ____________*/
+
+form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+fieldset {
+    padding: 1em 1em 0;
+    border: 1px solid #999;
+}
+legend {
+    margin: 0;
+    padding: 0 .1em;
+}
+label {
+    vertical-align: middle;
+    cursor: pointer;
+}
+input, textarea, button,
+select, optgroup, option {
+    font: inherit;
+    color: inherit;
+    /* background-color destroys button look */
+    line-height: 1;
+    margin: 0;
+    vertical-align: middle;
+}
+input[type=text], input[type=password], input.text, textarea {
+    padding: .1em;
+}
+input[type=radio], input[type=checkbox], input.check {
+    padding: 0;
+}
+input[type=submit], input.button, button {
+    cursor: pointer;
+}
+input[disabled], button[disabled],
+input[readonly], button[readonly] {
+    cursor: auto;
+}
+optgroup { font-style: italic; font-weight: bold; }
+option   { font-style: normal; font-weight: normal; }
+
+
+/*____________ misc ____________*/
+
+img {
+    border-width: 0;
+    vertical-align: middle;
+    color: #666; /* §colour */
+    background-color: transparent;
+    font-style: italic;
+}
+
+hr {
+    border-style: solid;
+    border-width: 1px 0 0;
+    text-align: center;
+    height: 0;
+    width: 100%;
+    clear: both;
+}
+
+acronym, abbr {
+    cursor: help;
+    border-bottom: 1px dotted;
+    font-style: normal;
+}
+
+pre, code, samp, kbd {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Bitstream Vera Sans Mono", "Liberation Mono", Monaco, "Courier New", monospace; /* §font */
+    font-size: 1em;
+    direction: ltr;
+    text-align: left;
+}
+pre {
+    overflow: auto;
+}
+
+blockquote {
+    padding: 0 1.25em;
+    border: solid #ccc; /* §colour */
+    border-width: 0 0 0 .25em;
+}
+q:before, q:after {
+    content: '';
+}
+
+sub, sup {
+    font-size: .8em;
+    line-height: 1;
+}
+sub {
+    vertical-align: sub;
+}
+sup {
+    vertical-align: super;
+}
+
+/*____________ text direction ____________*/
+
+[dir=rtl] caption,
+[dir=rtl] th {
+    text-align: right;
+}
+[dir=ltr] caption,
+[dir=ltr] th {
+    text-align: left;
+}
+
+[dir=rtl] ul, [dir=rtl] ol {
+    margin-right: 1.5em;
+    margin-left: 0;
+}
+[dir=ltr] ul, [dir=ltr] ol {
+    margin-left: 1.5em;
+    margin-right: 0;
+}
+[dir=rtl] li, [dir=rtl] dd {
+    margin: 0 1.5em 0 0;
+}
+[dir=ltr] li, [dir=ltr] dd {
+    margin: 0 0 0 1.5em;
+}
+[dir=rtl] blockquote {
+    border-width: 0 .25em 0 0;
+}
+[dir=ltr] blockquote {
+    border-width: 0 0 0 .25em;
+}
+
+
+/*____________ general classes ____________*/
+
+.box {
+    margin-bottom: 1.4em;
+    padding: 1em 1em .2em;
+    background-color: #ddd; /* §colour */
+    color: inherit;
+}
+
+/* hide something in an accessible way */
+.a11y {
+    position: absolute;
+    left: -99999px;
+    top: -99999px;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    display: inline;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 1px;
+    visibility: hidden;
+}
+
+/* one of the many clearfix versions */
+.group {
+    display: inline-block;
+}
+.group {
+    display: block;
+}
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
