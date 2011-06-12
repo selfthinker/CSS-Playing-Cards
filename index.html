@@ -23,10 +23,11 @@
     <![endif]-->
     <!-- the following js and css is not part of the CSS cards, but only for this example page -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
     <script type="text/javascript"><!--
     $(document).ready(function(){
-        $('.options').addClass('active');
+        $('#options').addClass('active');
+        $('.jsHint').show();
         $('.toggle li').click(function(){
             $('.playingCards').toggleClass($(this).text());
         });
@@ -44,30 +45,37 @@
         #cards {
             margin-bottom: 1.5em;
         }
-        .options.active {
+        #options.active {
             position: fixed;
-            top: 1em;
-            right: 1em;
+            top: 2em;
+            right: 2em;
             background: #ddd;
-            padding: .5em;
+            padding: .5em .5em 0;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
             border-radius: 5px;
         }
-        .options.active h3 {
+        #options.active h3 {
             font-size: 1.2em;
         }
-        .options.active ul {
+        #options.active ul {
             padding: 0;
             margin-left: 0;
         }
-        .options.active li {
+        #options.active li {
             color: #00c;
             margin-left: 1.5em;
             cursor: pointer;
         }
-        .options.active li:hover {
+        #options.active li:hover {
             text-decoration: underline;
+        }
+        .jsHint {
+            font-weight: bold;
+        }
+        .jsHint em {
+            font-weight: normal;
+            font-style: normal;
         }
         div.clear {
             clear: both;
@@ -90,20 +98,20 @@
             <ul>-->
                 <li><a href="#back">Back</a></li>
                 <li><a href="#front">Front</a></li>
-                <li><a href="#a-joker">Joker</a></li>
+                <li><a href="#joker">Joker</a></li>
                 <li><a href="#selected">Selected</a></li>
-                <li><a href="#as-a-link">As Link</a></li>
-                <li><a href="#as-a-label">As Label</a></li>
+                <li><a href="#link">As Link</a></li>
+                <li><a href="#label">As Label</a></li>
             <!--</ul>
         </li>
         <li>Different Hands
             <ul>-->
-                <li><a href="#lying-on-the-table">On the Table</a></li>
-                <li><a href="#in-your-hand">In Hand</a></li>
-                <li><a href="#a-deck">A Deck</a></li>
+                <li><a href="#table">On Table</a></li>
+                <li><a href="#hand">In Hand</a></li>
+                <li><a href="#deck">A Deck</a></li>
             <!--</ul>
         </li>-->
-        <li><a href="#a-full-set">A Full Set</a></li>
+        <li><a href="#full">A Full Set</a></li>
         <li><a href="#more">More</a></li>
     </ul>
 
@@ -120,8 +128,10 @@
 
         <p><em>Note: &quot;.simpleCards&quot; doesn't work with &quot;.faceImages&quot;.</em></p>
 
+        <p class="jsHint" style="display: none;">Use the <a href="#options">option tool</a> on the right to toggle between the different options and languages while you are looking at cards. <em>(Note: Some of the options don't work with all of the cards by design. And toggling between languages <a href="http://code.google.com/p/chromium/issues/detail?id=53124">doesn't work properly in Chrome</a>.)</em></p>
+
     </div>
-    <div class="options">
+    <div id="options">
         <h3>Options:</h3>
         <ul class="toggle">
             <li title="toggles a four colour deck with a standard two colour deck">fourColours</li>
@@ -168,7 +178,7 @@
     <div class="clear"></div>
 </div>
 
-<div id="a-joker">
+<div id="joker">
     <h3>A Joker</h3>
 
     <div class="card joker little">
@@ -204,7 +214,7 @@
     <div class="clear"></div>
 </div>
 
-<div id="as-a-link">
+<div id="link">
     <h3>As a Link (for selecting single cards)</h3>
 
     <a class="card rank-q hearts" href="#">
@@ -220,7 +230,7 @@
     <div class="clear"></div>
 </div>
 
-<div id="as-a-label">
+<div id="label">
     <h3>As a Label with Checkbox (for selecting multiple cards)</h3>
 
     <label for="c-2D" class="card rank-2 diams">
@@ -239,7 +249,7 @@
 </div>
 
 <!-- ul.table -->
-<div id="lying-on-the-table">
+<div id="table">
     <h2 id="different-hands">Different Hands</h2>
 
     <h3>Lying on the Table</h3>
@@ -305,7 +315,7 @@
 
 <!-- ul.hand -->
 
-<div id="in-your-hand">
+<div id="hand">
     <h3>In your Hand</h3>
 
 <pre>
@@ -378,7 +388,7 @@
 
 <!-- ul.deck -->
 
-<div id="a-deck">
+<div id="deck">
     <h3>A Deck</h3>
 
 <pre>
@@ -455,7 +465,7 @@
 
 <!-- A Full Set -->
 
-<div id="a-full-set">
+<div id="full">
     <h2>A Full Set</h2>
 
     <ul class="table">
