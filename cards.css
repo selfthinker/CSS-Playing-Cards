@@ -119,7 +119,7 @@
 .playingCards .card.rank-q input,
 .playingCards .card.rank-k input,
 .playingCards .card.rank-a input {
-    margin-top: 2.35em;
+    margin-top: 2.4em;
 }
 .playingCards.inText .card input {
     margin-top: 0;
