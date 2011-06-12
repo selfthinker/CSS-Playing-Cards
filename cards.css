@@ -163,7 +163,7 @@
 /* inner multiple suits */
 .playingCards .card .suit:after {
     display: block;
-    margin-top: -.9em;
+    margin-top: -.8em;
     text-align: center;
     white-space: pre;
     line-height: .9;
@@ -179,16 +179,20 @@
     word-spacing: -.05em;
     letter-spacing: -.1em;
 }
-.playingCards .card.clubs .suit:after {
-    letter-spacing: -.1em;
-}
 .playingCards .card.clubs.rank-10 .suit:after {
     word-spacing: -.15em;
 }
 
-/* the 10 is the most crowded */
+/* 8, 9, 10 are the most crowded */
+.playingCards .card.rank-8 .suit:after,
+.playingCards .card.rank-9 .suit:after {
+    letter-spacing: -.075em;
+}
 .playingCards .card.rank-10 .suit:after {
     letter-spacing: -.1em;
+}
+.playingCards .card.clubs .suit:after {
+    letter-spacing: -.125em;
 }
 
 /*____________ symbols in the middle (suits, full) ____________*/
