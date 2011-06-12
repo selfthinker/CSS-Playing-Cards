@@ -150,14 +150,6 @@
     letter-spacing: -.1em;
 }
 
-/* reset for the playful suits, as they are bigger than the normal suits */
-.playingCards.playfulSuits .suit:after {
-    font-size: 1em;
-    word-spacing: normal;
-    letter-spacing: normal;
-    line-height: 1;
-}
-
 /*____________ symbols in the middle (suits, full) ____________*/
 
 
@@ -277,124 +269,6 @@
     content: "\2663\00A0\2663\00A0\2663 \A\2663\00A0\2663\00A0\2663\00A0\2663 \A\2663\00A0\2663\00A0\2663";
 }
 
-/*____________ symbols in the middle (suits, hollow) ____________*/
-
-/* diamonds */
-.playingCards.playfulSuits .card.rank-2.diams .suit:after {
-    content: "\2662 \A\A\2662";
-}
-.playingCards.playfulSuits .card.rank-3.diams .suit:after {
-    content: "\2662 \A\2662 \A\2662";
-}
-.playingCards.playfulSuits .card.rank-4.diams .suit:after {
-    content: "\2662\00A0\00A0\00A0\2662 \A\A\2662\00A0\00A0\00A0\2662";
-}
-.playingCards.playfulSuits .card.rank-5.diams .suit:after {
-    content: "\2662\00A0\00A0\00A0\2662 \A\2662 \A\2662\00A0\00A0\00A0\2662";
-}
-.playingCards.playfulSuits .card.rank-6.diams .suit:after {
-    content: "\2662\00A0\00A0\00A0\2662 \A\2662\00A0\00A0\00A0\2662 \A\2662\00A0\00A0\00A0\2662";
-}
-.playingCards.playfulSuits .card.rank-7.diams .suit:after {
-    content: "\2662\00A0\00A0\2662 \A\2662\00A0\2662\00A0\2662 \A\2662\00A0\00A0\2662";
-}
-.playingCards.playfulSuits .card.rank-8.diams .suit:after {
-    content: "\2662\00A0\2662\00A0\2662 \A\2662\00A0\00A0\2662 \A\2662\00A0\2662\00A0\2662";
-}
-.playingCards.playfulSuits .card.rank-9.diams .suit:after {
-    content: "\2662\00A0\2662\00A0\2662 \A\2662\00A0\2662\00A0\2662 \A\2662\00A0\2662\00A0\2662";
-}
-.playingCards.playfulSuits .card.rank-10.diams .suit:after {
-    content: "\2662\00A0\2662\00A0\2662 \A\2662\00A0\2662\00A0\2662\00A0\2662 \A\2662\00A0\2662\00A0\2662";
-}
-
-/* hearts */
-.playingCards.playfulSuits .card.rank-2.hearts .suit:after {
-    content: "\2661 \A\A\2661";
-}
-.playingCards.playfulSuits .card.rank-3.hearts .suit:after {
-    content: "\2661 \A\2661 \A\2661";
-}
-.playingCards.playfulSuits .card.rank-4.hearts .suit:after {
-    content: "\2661\00A0\00A0\00A0\2661 \A\A\2661\00A0\00A0\00A0\2661";
-}
-.playingCards.playfulSuits .card.rank-5.hearts .suit:after {
-    content: "\2661\00A0\00A0\00A0\2661 \A\2661 \A\2661\00A0\00A0\00A0\2661";
-}
-.playingCards.playfulSuits .card.rank-6.hearts .suit:after {
-    content: "\2661\00A0\00A0\00A0\2661 \A\2661\00A0\00A0\00A0\2661 \A\2661\00A0\00A0\00A0\2661";
-}
-.playingCards.playfulSuits .card.rank-7.hearts .suit:after {
-    content: "\2661\00A0\00A0\2661 \A\2661\00A0\2661\00A0\2661 \A\2661\00A0\00A0\2661";
-}
-.playingCards.playfulSuits .card.rank-8.hearts .suit:after {
-    content: "\2661\00A0\2661\00A0\2661 \A\2661\00A0\00A0\2661 \A\2661\00A0\2661\00A0\2661";
-}
-.playingCards.playfulSuits .card.rank-9.hearts .suit:after {
-    content: "\2661\00A0\2661\00A0\2661 \A\2661\00A0\2661\00A0\2661 \A\2661\00A0\2661\00A0\2661";
-}
-.playingCards.playfulSuits .card.rank-10.hearts .suit:after {
-    content: "\2661\00A0\2661\00A0\2661 \A\2661\00A0\2661\00A0\2661\00A0\2661 \A\2661\00A0\2661\00A0\2661";
-}
-
-/* spades */
-.playingCards.playfulSuits .card.rank-2.spades .suit:after {
-    content: "\2664 \A\A\2664";
-}
-.playingCards.playfulSuits .card.rank-3.spades .suit:after {
-    content: "\2664 \A\2664 \A\2664";
-}
-.playingCards.playfulSuits .card.rank-4.spades .suit:after {
-    content: "\2664\00A0\00A0\00A0\2664 \A\A\2664\00A0\00A0\00A0\2664";
-}
-.playingCards.playfulSuits .card.rank-5.spades .suit:after {
-    content: "\2664\00A0\00A0\00A0\2664 \A\2664 \A\2664\00A0\00A0\00A0\2664";
-}
-.playingCards.playfulSuits .card.rank-6.spades .suit:after {
-    content: "\2664\00A0\00A0\00A0\2664 \A\2664\00A0\00A0\00A0\2664 \A\2664\00A0\00A0\00A0\2664";
-}
-.playingCards.playfulSuits .card.rank-7.spades .suit:after {
-    content: "\2664\00A0\00A0\2664 \A\2664\00A0\2664\00A0\2664 \A\2664\00A0\00A0\2664";
-}
-.playingCards.playfulSuits .card.rank-8.spades .suit:after {
-    content: "\2664\00A0\2664\00A0\2664 \A\2664\00A0\00A0\2664 \A\2664\00A0\2664\00A0\2664";
-}
-.playingCards.playfulSuits .card.rank-9.spades .suit:after {
-    content: "\2664\00A0\2664\00A0\2664 \A\2664\00A0\2664\00A0\2664 \A\2664\00A0\2664\00A0\2664";
-}
-.playingCards.playfulSuits .card.rank-10.spades .suit:after {
-    content: "\2664\00A0\2664\00A0\2664 \A\2664\00A0\2664\00A0\2664\00A0\2664 \A\2664\00A0\2664\00A0\2664";
-}
-
-/* clubs */
-.playingCards.playfulSuits .card.rank-2.clubs .suit:after {
-    content: "\2667 \A\A\2667";
-}
-.playingCards.playfulSuits .card.rank-3.clubs .suit:after {
-    content: "\2667 \A\2667 \A\2667";
-}
-.playingCards.playfulSuits .card.rank-4.clubs .suit:after {
-    content: "\2667\00A0\00A0\00A0\2667 \A\A\2667\00A0\00A0\00A0\2667";
-}
-.playingCards.playfulSuits .card.rank-5.clubs .suit:after {
-    content: "\2667\00A0\00A0\00A0\2667 \A\2667 \A\2667\00A0\00A0\00A0\2667";
-}
-.playingCards.playfulSuits .card.rank-6.clubs .suit:after {
-    content: "\2667\00A0\00A0\00A0\2667 \A\2667\00A0\00A0\00A0\2667 \A\2667\00A0\00A0\00A0\2667";
-}
-.playingCards.playfulSuits .card.rank-7.clubs .suit:after {
-    content: "\2667\00A0\00A0\2667 \A\2667\00A0\2667\00A0\2667 \A\2667\00A0\00A0\2667";
-}
-.playingCards.playfulSuits .card.rank-8.clubs .suit:after {
-    content: "\2667\00A0\2667\00A0\2667 \A\2667\00A0\00A0\2667 \A\2667\00A0\2667\00A0\2667";
-}
-.playingCards.playfulSuits .card.rank-9.clubs .suit:after {
-    content: "\2667\00A0\2667\00A0\2667 \A\2667\00A0\2667\00A0\2667 \A\2667\00A0\2667\00A0\2667";
-}
-.playingCards.playfulSuits .card.rank-10.clubs .suit:after {
-    content: "\2667\00A0\2667\00A0\2667 \A\2667\00A0\2667\00A0\2667\00A0\2667 \A\2667\00A0\2667\00A0\2667";
-}
-
 /*____________ symbols in the middle (faces as images) ____________*/
 
 .playingCards.faceImages .card.rank-j .suit:after,
@@ -464,20 +338,6 @@
     content: "\265A";
 }
 
-/* playful (i.e. hollow) dingbat symbols */
-.playingCards.playfulSuits .card.rank-j .suit:after {
-    content: "\2659";
-    right: .15em;
-}
-.playingCards.playfulSuits .card.rank-q .suit:after {
-    content: "\2655";
-    right: .1em;
-}
-.playingCards.playfulSuits .card.rank-k .suit:after {
-    content: "\2654";
-    right: .1em;
-}
-
 .playingCards .card .rank:after {
     position: absolute;
     top: .25em;
@@ -528,24 +388,7 @@
     right: .3em;
 }
 
-/* playful big suits
-.playingCards.simpleCards.playfulSuits .card.diams .suit:after,
-.playingCards.playfulSuits .card.rank-a.diams .suit:after {
-    content: "\2662";
-}
-.playingCards.simpleCards.playfulSuits .card.hearts .suit:after,
-.playingCards.playfulSuits .card.rank-a.hearts .suit:after {
-    content: "\2661";
-}
-.playingCards.simpleCards.playfulSuits .card.spades .suit:after,
-.playingCards.playfulSuits .card.rank-a.spades .suit:after {
-    content: "\2664";
-}
-.playingCards.simpleCards.playfulSuits .card.clubs .suit:after,
-.playingCards.playfulSuits .card.rank-a.clubs .suit:after {
-    content: "\2667";
-}
-*/
+/*____________ smaller cards for use inside text ____________*/
 
 .playingCards.inText .card {
     font-size: .4em;
