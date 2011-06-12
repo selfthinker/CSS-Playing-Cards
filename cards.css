@@ -119,6 +119,21 @@
     margin-top: 0;
 }
 
+/* different rank letters for different languages */
+[lang=de] .playingCards .card.rank-j .rank:after {
+    content: "B";
+}
+[lang=fr] .playingCards .card.rank-j .rank:after {
+    content: "V";
+}
+[lang=de] .playingCards .card.rank-q .rank:after,
+[lang=fr] .playingCards .card.rank-q .rank:after {
+    content: "D";
+}
+[lang=fr] .playingCards .card.rank-k .rank:after {
+    content: "R";
+}
+
 /* inner multiple suits */
 .playingCards .card .suit:after {
     display: block;
@@ -151,7 +166,6 @@
 }
 
 /*____________ symbols in the middle (suits, full) ____________*/
-
 
 /* diamonds */
 .playingCards .card.rank-2.diams .suit:after {
@@ -343,21 +357,6 @@
     top: .25em;
     left: .25em;
     background: #fff;
-}
-
-/* different rank letters for different languages */
-[lang=de] .playingCards .card.rank-j .rank:after {
-    content: "B";
-}
-[lang=fr] .playingCards .card.rank-j .rank:after {
-    content: "V";
-}
-[lang=de] .playingCards .card.rank-q .rank:after,
-[lang=fr] .playingCards .card.rank-q .rank:after {
-    content: "D";
-}
-[lang=fr] .playingCards .card.rank-k .rank:after {
-    content: "R";
 }
 
 /* big suits in middle */
