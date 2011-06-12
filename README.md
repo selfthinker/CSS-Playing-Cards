@@ -5,16 +5,17 @@ CSS Playing Cards help you to create simple and semantic playing cards in (X)HTM
 
 * @author   Anika Henke <anika@selfthinker.org>
 * @license  CC BY-SA [http://creativecommons.org/licenses/by-sa/3.0]
-* @version  2010-08-22
+* @version  2011-06-12
 * @link     http://github.com/selfthinker/css-playing-cards
 
 Contents
 --------
 
 * **cards.css** is the main part and provides the styles for the cards
-* **cards-ie.css** is a tiny fix for IE to make a simple version work
+* **cards-ie.css** is a tiny fix for IE < 9 to make a simple version work
+* **cards-ie9.css** is a fix for IE9
 * **examples.html** provides some example HTML
-* **README** is this file
+* **README.md** is this file
 * **faces/** contains images for the faces
 
 How to use it
@@ -22,16 +23,16 @@ How to use it
 
 ### Surrounding container
 
-    <div class="playingCards [fourColours|faceImages|simpleCards|playfulSuits|rotateHand]">
+    <div class="playingCards [fourColours|faceImages|simpleCards|inText|rotateHand]">
         ...
     </div>
 
 There needs to be a surrounding container with the class "playingCards" around all the cards. That container can also have other classes which serve as **configuration options**:
 
 * **fourColours**: Switches the default two colour deck with a four colour deck. (The colours of the German four colour deck will be different.)
-* **faceImages**: Switches the default simple big letters for faces with images. (The default letters are dependent on the language.) *Note: Depending on the size of the card, you might need to adjust the image positioning of the faces in cards.css (search for "@change").*
-* **simpleCards**: Switches the default multiple suits to one simple single big suit in the middle. *Note: This option does not work with "faceImages" and "playfulSuits"*.
-* **playfulSuits**: Switches the default normal suits to more fancy ones.
+* **faceImages**: Switches the default dingbat symbols for faces with images. *Note: Depending on the size of the card, you might need to adjust the image positioning of the faces in cards.css (search for "@change").*
+* **simpleCards**: Switches the default multiple suits to one simple single big suit in the middle. *Note: This option does not work with "faceImages"*.
+* **inText**: Switches the size to something small enough to fit into normal text and also removes the inner bits.
 * **rotateHand**: Switches the hand to rotate and fan in a semi circle.
 
 ### The back of a card
@@ -47,13 +48,20 @@ To make the cards smaller or bigger, just change the font-size in the main "card
         <[element] class="suit">&[diams|hearts|spades|clubs];</[element]>
     </[element]>
 
-Depending on the context, the main card element should either be an **a** (for selecting single cards), a **label** (for selecting multiple cards) or a **span** (for pure representation or played cards), e.g.
+Depending on the context, the main card element should either be an **a** (for selecting single cards), a **label** (for selecting multiple cards), an **abbr** (for making a card more accessible with a title), a **div** or a **span** (for pure representation or played cards), e.g.
 
-    <[a|label|span] class="card rank-a clubs" [href=""]>
+    <[a|label|abbr|div|span] class="card rank-a clubs" [href=""] [title=""]>
         <span class="rank">A</span>
         <span class="suit">&clubs;</span>
         [<input type="checkbox" [...] />] <!-- if in label -->
-    </[a|label|span]>
+    </[a|label|abbr|div|span]>
+
+#### A joker
+
+    <[element] class="card joker [big|little]">
+        <[element] class="rank">[+|-]</[element]>
+        <[element] class="suit">Joker</[element]>
+    </[element]>
 
 ### Different hands
 
@@ -73,8 +81,8 @@ Depending on the context, the main card element should either be an **a** (for s
 Requirements
 ------------
 
-The CSS is only intended to work in **modern browsers** (Firefox 3.6+, Opera 10+, Chrome, Safari).
-To make a basic version work in IE8, you need the provided **cards-ie.css**.
+The CSS is only intended to work in **modern browsers** (Firefox 3.6+, Opera 10+, Chrome, Safari, IE9).
+To make a basic version work in IE8, you need the provided **cards-ie.css**. And IE9 also needs a little fix, as provided in **cards-ie9.css**.
 
 Credits
 -------
