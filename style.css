@@ -1,0 +1,45 @@
+body {
+    margin: 2em 20%;
+}
+#cards {
+    margin-bottom: 1.5em;
+}
+#options.active {
+    position: fixed;
+    top: 2em;
+    right: 2em;
+    background: #ddd;
+    padding: .5em .5em 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#options.active h3 {
+    font-size: 1.2em;
+}
+#options.active ul {
+    padding: 0;
+    margin-left: 0;
+}
+#options.active li {
+    color: #00c;
+    margin-left: 1.5em;
+    cursor: pointer;
+}
+#options.active li:hover {
+    text-decoration: underline;
+}
+.jsHint {
+    font-weight: bold;
+}
+.jsHint em {
+    font-weight: normal;
+    font-style: normal;
+}
+div.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 1px;
+    visibility: hidden;
+}

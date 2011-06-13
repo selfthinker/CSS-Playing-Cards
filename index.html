@@ -12,8 +12,10 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <title>CSS Playing Cards</title>
+    <meta name="robots" content="index,follow" />
     <link rel="stylesheet" type="text/css" href="basic.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="smoothness/jquery-ui-1.8.13.custom.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="cards.css" media="screen" />
     <!--[if lt IE 9]>
         <link rel="stylesheet" type="text/css" href="cards-ie.css" media="screen" />
@@ -21,77 +23,17 @@
     <!--[if IE 9]>
         <link rel="stylesheet" type="text/css" href="cards-ie9.css" media="screen" />
     <![endif]-->
-    <!-- the following js and css is not part of the CSS cards, but only for this example page -->
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
-    <script type="text/javascript"><!--
-    $(document).ready(function(){
-        $('#options').addClass('active');
-        $('.jsHint').show();
-        $('.toggle li').click(function(){
-            $('.playingCards').toggleClass($(this).text());
-        });
-        $('.lang li').click(function(){
-            $('html').attr('lang', $(this).text());
-            $('html').attr('xml:lang', $(this).text());
-        });
-        $('#cards').tabs();
-    });
-    //--></script>
-    <style type="text/css"><!--
-        body {
-            margin: 2em 20%;
-        }
-        #cards {
-            margin-bottom: 1.5em;
-        }
-        #options.active {
-            position: fixed;
-            top: 2em;
-            right: 2em;
-            background: #ddd;
-            padding: .5em .5em 0;
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-            border-radius: 5px;
-        }
-        #options.active h3 {
-            font-size: 1.2em;
-        }
-        #options.active ul {
-            padding: 0;
-            margin-left: 0;
-        }
-        #options.active li {
-            color: #00c;
-            margin-left: 1.5em;
-            cursor: pointer;
-        }
-        #options.active li:hover {
-            text-decoration: underline;
-        }
-        .jsHint {
-            font-weight: bold;
-        }
-        .jsHint em {
-            font-weight: normal;
-            font-style: normal;
-        }
-        div.clear {
-            clear: both;
-            height: 0;
-            line-height: 0;
-            font-size: 1px;
-            visibility: hidden;
-        }
-    --></style>
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 
-    <h1>CSS Playing Cards</h1>
+<h1>CSS Playing Cards</h1>
 
 <div class="playingCards fourColours faceImages rotateHand" id="cards">
 
+<!-- TOC -->
     <ul id="toc">
         <li><a href="#basics">Basics</a></li>
         <!--<li>Single Cards
@@ -115,7 +57,12 @@
         <li><a href="#more">More</a></li>
     </ul>
 
+<!-- ********** BASICS ********** -->
+
     <div id="basics">
+
+        <p><strong>CSS Playing Cards help you to create simple and semantic playing cards in (X)HTML. This documents some examples and how to set them up.</strong></p>
+
         <p>Surrounding Container:</p>
 <pre>
 &lt;div class="playingCards"&gt;...&lt;/div&gt;
@@ -131,6 +78,7 @@
         <p class="jsHint" style="display: none;">Use the <a href="#options">option tool</a> on the right to toggle between the different options and languages while you are looking at cards (best on <a href="#full">the full set</a>). <em>(Note: Some of the options don't work with all of the cards by design. And toggling between languages <a href="http://code.google.com/p/chromium/issues/detail?id=53124">doesn't work properly in Chrome</a>.)</em></p>
 
     </div>
+<!-- OPTIONS -->
     <div id="options">
         <h3>Options:</h3>
         <ul class="toggle">
@@ -148,8 +96,9 @@
         </ul>
     </div>
 
-<!-- .card -->
+<!-- ********** SINGLE CARD ********** -->
 
+<!-- BACK -->
 <div id="back">
     <h2 id="single-cards">Single Cards</h2>
 
@@ -162,6 +111,7 @@
     <div class="clear"></div>
 </div>
 
+<!-- FRONT -->
 <div id="front">
     <h3>Front</h3>
 
@@ -178,6 +128,7 @@
     <div class="clear"></div>
 </div>
 
+<!-- JOKER -->
 <div id="joker">
     <h3>A Joker</h3>
 
@@ -194,6 +145,7 @@
     <div class="clear"></div>
 </div>
 
+<!-- SELECTED -->
 <div id="selected">
     <h3>Selected</h3>
 
@@ -214,6 +166,7 @@
     <div class="clear"></div>
 </div>
 
+<!-- LINK -->
 <div id="link">
     <h3>As a Link (for selecting single cards)</h3>
 
@@ -230,6 +183,7 @@
     <div class="clear"></div>
 </div>
 
+<!-- LABEL -->
 <div id="label">
     <h3>As a Label with Checkbox (for selecting multiple cards)</h3>
 
@@ -248,7 +202,9 @@
     <div class="clear"></div>
 </div>
 
-<!-- ul.table -->
+<!-- ********** DIFFERENT HANDS ********** -->
+
+<!-- TABLE -->
 <div id="table">
     <h2 id="different-hands">Different Hands</h2>
 
@@ -313,8 +269,7 @@
     <div class="clear"></div>
 </div>
 
-<!-- ul.hand -->
-
+<!-- HAND -->
 <div id="hand">
     <h3>In your Hand</h3>
 
@@ -386,8 +341,7 @@
     <div class="clear"></div>
 </div>
 
-<!-- ul.deck -->
-
+<!-- DECK -->
 <div id="deck">
     <h3>A Deck</h3>
 
@@ -463,8 +417,7 @@
     <div class="clear"></div>
 </div>
 
-<!-- A Full Set -->
-
+<!-- ********** FULL SET ********** -->
 <div id="full">
     <h2>A Full Set</h2>
 
@@ -650,15 +603,15 @@
     <div class="clear"></div>
 </div>
 
-<!-- More -->
+<!-- ********** MORE ********** -->
 
 <div id="more">
     <h2>More</h2>
 
     <ul>
-        <li><a href="http://blog.selfthinker.org/2010/08/23/css-playing-cards/">The original blog post</a></li>
         <li><a href="https://github.com/selfthinker/CSS-Playing-Cards">The code on GitHub</a></li>
         <li><a href="https://github.com/selfthinker/CSS-Playing-Cards/zipball/master">Download from GitHub</a></li>
+        <li><a href="http://blog.selfthinker.org/2010/08/23/css-playing-cards/">The original blog post</a></li>
         <li><a href="http://socialcompare.com/en/comparison/css-playing-cards-pgnq7dx">Comparison of CSS Playing Cards</a></li>
     </ul>
 </div>
