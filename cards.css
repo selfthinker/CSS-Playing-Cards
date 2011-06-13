@@ -443,6 +443,10 @@
 .playingCards.inText .card.joker .rank:after {
     content: "" !important;
 }
+.playingCards.inText .card .rank:after {
+    left: .5em;
+    padding: 0 .1em;
+}
 
 
 /* hand (in your hand or on table or as a deck)
