@@ -1,5 +1,8 @@
 body {
-    margin: 2em 20%;
+    margin: 2em auto;
+    max-width: 52em;
+    min-width: 20em;
+    padding: 0 10em;
 }
 #cards {
     margin-bottom: 1.5em;
@@ -25,6 +28,9 @@ body {
     color: #00c;
     margin-left: 1.5em;
     cursor: pointer;
+}
+#options.active li.active {
+    color: #c00;
 }
 #options.active li:hover {
     text-decoration: underline;
