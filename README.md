@@ -5,8 +5,8 @@ CSS Playing Cards help you to create simple and semantic playing cards in (X)HTM
 
 * @author   Anika Henke <anika@selfthinker.org>
 * @license  CC BY-SA [http://creativecommons.org/licenses/by-sa/3.0]
-* @version  2011-06-12
-* @link     http://github.com/selfthinker/css-playing-cards
+* @version  2011-06-14
+* @link     http://selfthinker.github.com/CSS-Playing-Cards/
 
 Contents
 --------
@@ -30,8 +30,8 @@ How to use it
 There needs to be a surrounding container with the class "playingCards" around all the cards. That container can also have other classes which serve as **configuration options**:
 
 * **fourColours**: Switches the default two colour deck with a four colour deck. (The colours of the German four colour deck will be different.)
-* **faceImages**: Switches the default dingbat symbols for faces with images. *Note: Depending on the size of the card, you might need to adjust the image positioning of the faces in cards.css (search for "@change").*
-* **simpleCards**: Switches the default multiple suits to one simple single big suit in the middle. *Note: This option does not work with "faceImages"*.
+* **faceImages**: Switches the default dingbat symbols for faces with images. *Note: Depending on the size of the card, you might need to adjust the image positioning of the faces in cards.css and the font-size in cards-ie9.css (search for "@change").*
+* **simpleCards**: Switches the default multiple suits to one simple single big suit in the middle.
 * **inText**: Switches the size to something small enough to fit into normal text and also removes the inner bits.
 * **rotateHand**: Switches the hand to rotate and fan in a semi circle.
 
@@ -56,7 +56,7 @@ Depending on the context, the main card element should either be an **a** (for s
         [<input type="checkbox" [...] />] <!-- if in label -->
     </[a|label|abbr|div|span]>
 
-#### A joker
+### A joker
 
     <[element] class="card joker [big|little]">
         <[element] class="rank">[+|-]</[element]>
