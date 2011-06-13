@@ -30,9 +30,16 @@ body {
     color: #00c;
     margin-left: 1.5em;
     cursor: pointer;
+    list-style-image: url(images/checkbox_no.png);
 }
 #options.active li.active {
-    color: #c00;
+    list-style-image: url(images/checkbox_yes.png);
+}
+#options.active li.exclusive {
+    list-style-image: url(images/radiobutton_no.png);
+}
+#options.active li.exclusive.active {
+    list-style-image: url(images/radiobutton_yes.png);
 }
 #options.active li:hover {
     text-decoration: underline;
