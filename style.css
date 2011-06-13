@@ -4,9 +4,11 @@ body {
     min-width: 20em;
     padding: 0 10em;
 }
+
 #cards {
     margin-bottom: 1.5em;
 }
+
 #options.active {
     position: fixed;
     top: 2em;
@@ -35,6 +37,20 @@ body {
 #options.active li:hover {
     text-decoration: underline;
 }
+#explanation {
+    background-color: #fff;
+    border: 1px solid #999;
+    width: 8em;
+    margin-bottom: 1em;
+    padding: .2em .4em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+#explanation strong {
+    display: block;
+}
+
 .jsHint {
     font-weight: bold;
 }
@@ -42,6 +58,7 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
 div.clear {
     clear: both;
     height: 0;

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     // show hint only useful when JS is enabled
     $('.jsHint').show();
 
@@ -58,6 +59,17 @@ $(document).ready(function(){
 
     });
 
+    // show explanations for each option
+    var defaultExplanation = 'Hover over an option to read an explanation; click on it to enable or disable it';
+    $('#options').append('<div id="explanation">'+defaultExplanation+'</div>');
+    $('#options li').hover(function(){
+        var thisObj = $(this);
+        var option  = thisObj.text();
+        var explain = thisObj.attr('title');
+        $('#explanation').html('<strong>'+option+'</strong> '+explain);
+    });
+
     // initiate jQueryUI tabs
     $('#cards').tabs();
+
 });
