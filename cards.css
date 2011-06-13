@@ -355,6 +355,9 @@
 .playingCards.faceImages .card.rank-k.clubs  { background-image: url(faces/KC.gif); }
 
 .playingCards.faceImages .card.joker         { background-image: url(faces/joker.gif); }
+.playingCards.simpleCards .card.rank-j,
+.playingCards.simpleCards .card.rank-q,
+.playingCards.simpleCards .card.rank-k       { background-image: none !important; }
 
 /*____________ symbols in the middle (faces as dingbat symbols) ____________*/
 
