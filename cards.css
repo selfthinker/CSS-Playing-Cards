@@ -392,7 +392,7 @@
 }
 .playingCards .card.joker .rank:after {
     position: absolute;
-    content: "\262F";
+    content: "\2766";
     top: .4em;
     left: .1em;
 }
