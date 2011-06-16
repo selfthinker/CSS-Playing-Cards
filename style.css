@@ -3,17 +3,16 @@ body {
     max-width: 62em;
     min-width: 26em;
     padding: 0 2em;
-    position: relative;
 }
 
 #cards {
-    margin: 0 10em 1.5em 0;
+    margin: 0 11em 1.5em 0;
 }
 
 #options.active {
-    position: fixed;
-    top: 5.6em;
-    right: 1em;
+    position: absolute;
+    top: 0;
+    right: -11em;
     background: #ddd;
     padding: .5em .5em 0;
     -webkit-border-radius: 5px;
