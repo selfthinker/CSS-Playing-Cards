@@ -1,18 +1,19 @@
 body {
     margin: 2em auto;
-    max-width: 52em;
-    min-width: 20em;
-    padding: 0 10em;
+    max-width: 62em;
+    min-width: 26em;
+    padding: 0 2em;
+    position: relative;
 }
 
 #cards {
-    margin-bottom: 1.5em;
+    margin: 0 10em 1.5em 0;
 }
 
 #options.active {
     position: fixed;
-    top: 2em;
-    right: 2em;
+    top: 5.6em;
+    right: 1em;
     background: #ddd;
     padding: .5em .5em 0;
     -webkit-border-radius: 5px;
@@ -21,13 +22,13 @@ body {
 }
 #options.active h3 {
     font-size: 1.2em;
+    margin-bottom: 0.444em;
 }
 #options.active ul {
     padding: 0;
-    margin-left: 0;
+    margin: 0 0 .8em 0;
 }
 #options.active li {
-    color: #00c;
     margin-left: 1.5em;
     cursor: pointer;
     list-style-image: url(images/checkbox_no.png);
@@ -50,12 +51,17 @@ body {
     width: 8em;
     margin-bottom: 1em;
     padding: .2em .4em;
+    line-height: 1.2;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
 #explanation strong {
     display: block;
+}
+
+#basics img {
+    float: right;
 }
 
 .jsHint {
