@@ -3,8 +3,8 @@
  *
  * @author   Anika Henke <anika@selfthinker.org>
  * @license  CC BY-SA [http://creativecommons.org/licenses/by-sa/3.0]
- * @version  2011-06-12
- * @link     http://github.com/selfthinker/css-playing-cards
+ * @version  2011-06-14
+ * @link     http://selfthinker.github.com/CSS-Playing-Cards/
  */
 
 /* card itself
@@ -450,6 +450,7 @@
     left: .5em;
     padding: 0 .1em;
 }
+
 
 /* hand (in your hand or on table or as a deck)
 ********************************************************************/

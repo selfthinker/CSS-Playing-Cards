@@ -3,12 +3,12 @@
  *
  * @author   Anika Henke <anika@selfthinker.org>
  * @license  CC BY-SA [http://creativecommons.org/licenses/by-sa/3.0]
- * @version  2011-06-12
- * @link     http://github.com/selfthinker/css-playing-cards
+ * @version  2011-06-14
+ * @link     http://selfthinker.github.com/CSS-Playing-Cards/
  */
 
 /* fix for a bug in IE9 (see http://stackoverflow.com/questions/6322916/)
-   this change also means that whenever the general font-size of a .card changes,
+   @change: this change also means that whenever the general font-size of a .card changes,
    this value needs to be adjusted to be (3 x <.card font-size>) */
 .playingCards.simpleCards .card .suit:after,
 .playingCards .card.rank-j .suit:after,
