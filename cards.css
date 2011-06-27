@@ -15,10 +15,10 @@
     width: 3.3em;
     height: 4.6em;
     border: 1px solid #666;
-    border-radius: .3em;
     -moz-border-radius: .3em;
     -webkit-border-radius: .3em;
     -khtml-border-radius: .3em;
+    border-radius: .3em;
     padding: .25em;
     margin: 0 .5em .5em 0;
     text-align: center;
