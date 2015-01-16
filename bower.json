@@ -1,0 +1,24 @@
+{
+  "name": "CSS-Playing-Cards",
+  "version": "0.0.0",
+  "homepage": "http://selfthinker.github.com/CSS-Playing-Cards/",
+  "authors": [
+    "Anika Henke <anika@selfthinker.org>",
+    "Lucas Paulger <lucas.paulger@gmail.com>"
+  ],
+  "description": "CSS Playing Cards help you to create simple and semantic playing cards in (X)HTML.",
+  "main": "cards.css",
+  "keywords": [
+    "CSS",
+    "Cards",
+    "Playing"
+  ],
+  "license": "CC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
