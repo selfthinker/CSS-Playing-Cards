@@ -38,7 +38,8 @@
 /* selected and hover state */
 .playingCards a.card:hover, .playingCards a.card:active, .playingCards a.card:focus,
 .playingCards label.card:hover,
-.playingCards strong .card {
+.playingCards strong .card,
+.playingCards a.card.selected {
     bottom: 1em;
 }
 .playingCards label.card {
