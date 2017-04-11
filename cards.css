@@ -176,7 +176,6 @@
     word-spacing: -.15em;
 }
 .playingCards .card.hearts.rank-10 .suit:after {
-    word-spacing: -.05em;
     letter-spacing: -.1em;
 }
 .playingCards .card.clubs.rank-10 .suit:after {
